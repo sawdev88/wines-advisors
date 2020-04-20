@@ -1,0 +1,235 @@
+html {
+  font-size: 1vw;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.75rem;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.nav {
+  text-transform: uppercase;
+  transition: .3s ease-in-out;
+
+  & a:hover {
+    color: #6878a0;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  border-bottom: 1px solid #9f9892;
+}
+
+.header-padding {
+  padding: 1.5rem 20%;
+
+  a {
+    color: #345;
+    margin: 0 .75rem;
+  }
+}
+
+.banner {
+  background: url(./images/city.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  filter: blur(1.5px);
+  text-align: center;
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+}
+
+.callout {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  border: .2rem solid #fff;
+  width: 40vw;
+  color: #fff;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tile {
+  padding: 0 5rem;
+}
+
+.container {
+  padding: 6rem 3rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.img-border {
+  height: 22rem;
+  width: 90%;
+  border: .75rem solid rgba(85, 85, 85, 1);;
+  position: absolute;
+  right: -1rem;
+  top: 0;
+}
+
+.about-img {
+  height: 22rem;
+  width: auto;
+  position: relative;
+  z-index: 1;
+  margin: 2rem 0 0 2rem;
+}
+
+#contact {
+  background: url(./images/city.jpg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: gray;
+  background-blend-mode: luminosity;
+  height: 80vh;
+  position: relative;
+
+  .overlay {
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.form-errors {
+  font-size: 1.4rem;
+}
+
+.side-callout {
+  background: rgba(0,0,0,.5);
+  height: 100%;
+  width: 40%;
+  padding-top: 12%;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+
+  h2 {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    margin-left: 50%;
+    font-weight: 100;
+  }
+}
+
+.callout-icon {
+  font-size: 4rem;
+  margin: 3rem 0 2rem;
+}
+
+.contact-form {
+  position: relative;
+  z-index: 1;
+  width: 55%;
+  display: inline-block;
+  color: #fff;
+  vertical-align: top;
+  padding: 12% 12% 0 2rem;
+
+  input {
+    margin: .2rem 0;
+  }
+
+  textarea {
+    margin: .2rem;
+    height: 7.5rem;
+  }
+}
+
+.send-btn {
+  margin-left: 58%;
+}
+
+.form-errors {
+  color: #fff;
+  background: #d9534f;
+}
+
+
+
+// animation
+
+#arrow-wrapper {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.arrow-border {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid orange;
+  border-radius: 50%;
+}
+.arrow {
+  position: absolute;
+  bottom: 24px;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  right: 19px;
+}
+
+.down {
+  -moz-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.pulse {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    margin: 0;
+    left: -2px;
+    animation: pulsate 2s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0.0;
+    box-shadow: 0 0 1px 2px #89849b;
+    animation-delay: 2s;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.9, 0.9);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.3, 1.3);
+    opacity: 0;
+  }
+}
