@@ -9,6 +9,7 @@ function Header() {
     <header className="d-flex header-padding header bg-white">
       <div  className="mr-auto">
         <img src={logo} alt="logo" className="logo" />
+        WINES ADVISORS
       </div>
 
       <div  className="flex-2 text-right">

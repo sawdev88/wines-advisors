@@ -81,9 +81,9 @@ function Contact() {
       <div className="contact-form">
         <h2><strong>OUR</strong> ADDRESS</h2>
 
-        <p><FontAwesomeIcon icon={ faMapMarker } /> address 1</p>
-        <p><FontAwesomeIcon icon={ faEnvelope } /> address</p>
-        <p><FontAwesomeIcon icon={ faPhone } /> address</p>
+        <p><FontAwesomeIcon icon={ faMapMarker } /> <span className="ml-2">123 Butt St</span></p>
+        <p><FontAwesomeIcon icon={ faEnvelope } /> <span className="ml-2">butthead@gmail.com</span></p>
+        <p><FontAwesomeIcon icon={ faPhone } /> <span className="ml-2">(123)321-1234</span></p>
 
         <p className="mt-5">For any general inquiries, please fill in the following contact form:</p>
         <form onSubmit={ handleSendEmail }>

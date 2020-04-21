@@ -9,11 +9,7 @@ var transporter = nodemailer.createTransport({
   auth: {
     user: process.env.email, // your email address to send email from
     pass: process.env.password // your gmail account password
-  },
-  tls: {
-        // do not fail on invalid certs
-        rejectUnauthorized: false
-    }
+  }
 });
 
 module.exports = transporter;

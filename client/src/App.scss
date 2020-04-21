@@ -32,14 +32,18 @@ p {
 .logo {
   height: 2rem;
   width: auto;
+  vertical-align: top;
+  margin-left: 2.8rem;
+  display: block;
 }
 
 .header-padding {
-  padding: 1.5rem 20%;
+  padding: .5rem 20%;
 
   a {
     color: #345;
     margin: 0 .75rem;
+    line-height: 3.5rem;
   }
 }
 
@@ -60,7 +64,7 @@ p {
   text-align: center;
   transform: translate(-50%, -50%);
   border: .2rem solid #fff;
-  width: 40vw;
+  width: 46vw;
   color: #fff;
   padding: 2rem;
 }
@@ -69,6 +73,17 @@ p {
   font-size: 2.5rem;
   font-weight: 800;
   text-transform: uppercase;
+  display: inline-block;
+  color: rgba(85, 85, 85, 1);
+
+  &:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 8px;
+    border-bottom: 8px solid #6696c1;
+  }
 }
 
 .tile {
@@ -86,7 +101,7 @@ p {
 .img-border {
   height: 22rem;
   width: 90%;
-  border: .75rem solid rgba(85, 85, 85, 1);;
+  border: .75rem solid rgba(85, 85, 85, 1);
   position: absolute;
   right: -1rem;
   top: 0;
@@ -100,8 +115,17 @@ p {
   margin: 2rem 0 0 2rem;
 }
 
+#whatWeDo {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  svg {
+    opacity: .8;
+  }
+}
+
 #contact {
-  background: url(./images/city.jpg) no-repeat center center fixed;
+  background: url(./images/footer.jpg) no-repeat center center fixed;
   background-size: cover;
   background-color: gray;
   background-blend-mode: luminosity;
