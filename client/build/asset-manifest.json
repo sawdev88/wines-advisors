@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.40f33a19.chunk.css",
+    "main.js": "/static/js/main.2c1a6c3e.chunk.js",
+    "main.js.map": "/static/js/main.2c1a6c3e.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.016ffb4f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.016ffb4f.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.3b64623e.chunk.js": "/static/js/2.3b64623e.chunk.js",
+    "static/js/2.3b64623e.chunk.js.map": "/static/js/2.3b64623e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.2516818d420878db000cc61335210a4e.js": "/precache-manifest.2516818d420878db000cc61335210a4e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.40f33a19.chunk.css.map": "/static/css/main.40f33a19.chunk.css.map",
+    "static/js/2.3b64623e.chunk.js.LICENSE.txt": "/static/js/2.3b64623e.chunk.js.LICENSE.txt",
+    "static/media/aw_logo.png": "/static/media/aw_logo.9abfffdd.png",
+    "static/media/App.scss": "/static/media/city.24e47aa8.jpg",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg",
+    "static/media/placeholder.jpg": "/static/media/placeholder.57ad5593.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.016ffb4f.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.3b64623e.chunk.js",
+    "static/css/main.40f33a19.chunk.css",
+    "static/js/main.2c1a6c3e.chunk.js"
+  ]
+}

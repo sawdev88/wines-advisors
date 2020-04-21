@@ -1,15 +1,18 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
+const PORT = process.env.PORT || 3001;
 const dotenv = require('dotenv');
 dotenv.config();
 const path = require('path');
 const app = express()
 const transporter = require('./config');
 
-const buildPath = path.join(__dirname, '..', 'build');
-app.use(express.json());
-app.use(express.static(buildPath));
+const publicPath = path.join(__dirname, '.', 'client/public');
+
+app.get('*', (req, res) => {
+   res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 app.post('/send', (req, res) => {
   try {
@@ -43,7 +46,6 @@ app.post('/send', (req, res) => {
 }
 });
 
-const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
 	console.log(`Server listening on PORT ${PORT}`)
 })
