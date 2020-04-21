@@ -11,7 +11,7 @@ function WhatWeDo() {
         <div className="flex-fill tile">
           <div className="text-center mb-4">
             <FontAwesomeIcon className="callout-icon" icon={ faStore } />
-            <h5>Sellers</h5>
+            <h4>Sellers</h4>
           </div>
 
           <p>
