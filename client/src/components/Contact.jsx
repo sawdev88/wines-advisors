@@ -2,8 +2,13 @@ import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaperPlane, faMapMarker, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
+import Alerter from './Alerter';
 
 function Contact() {
+  const [success, setSuccess] = useState(false);
+  const [errors, setErrors] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendErrors] = useState(false);
   const [state, setState] = useState({
     firstName: '',
     lastName: '',
@@ -11,16 +16,48 @@ function Contact() {
     message: ''
   });
 
-  const [result, setResult] = useState(null);
+  function handleSuccessMessage() {
+      setSuccess(true)
+      setState({
+        firstName: '', lastName: '', emailAddress: '', message: ''
+      })
+      toggleSending(false);
+      setTimeout(() => { setSuccess(false) }, 3000);
+  }
+
+  function handleValidationErrors() {
+    setErrors(true)
+    setTimeout(() => { setErrors(false) }, 3000);
+  }
+
+  function handleSendingErrors() {
+    setSendErrors(true)
+    toggleSending(false);
+    setTimeout(() => { setSendErrors(false) }, 3000);
+  }
+
+  function toggleSending(bool) {
+    setSending(bool);
+  }
 
   const handleSendEmail = event => {
     event.preventDefault();
 
+    if (!state.firstName || !state.lastName || !state.emailAddress || !state.message) {
+      handleValidationErrors();
+      return;
+    }
+
+    toggleSending(true);
+
     axios.post('/send', { ...state })
           .then(response => {
+            if (response.data.success) {
+              handleSuccessMessage();
+            }
           })
           .catch(() => {
-            setResult({ success: false, message: 'Something went wrong. Try again later'})
+            handleSendingErrors()
           });
     }
 
@@ -54,7 +91,7 @@ function Contact() {
             <div className="flex-1">
               <input className="form-control" placeholder="First Name" name="firstName" onChange={handleInputChange} value={state.firstName} />
               <input className="form-control" placeholder="Last Name" name="lastName" onChange={handleInputChange} value={state.lastName} />
-              <input type="email" className="form-control" name="emailAddress" placeholder="Email" onChange={handleInputChange} value={state.EmailAddress} />
+              <input type="email" className="form-control" name="emailAddress" placeholder="Email" onChange={handleInputChange} value={state.emailAddress} />
             </div>
             <div className="flex-1">
               <textarea className="form-control" placeholder="Message" name="message" onChange={handleInputChange} value={state.message} ></textarea>
@@ -63,19 +100,17 @@ function Contact() {
 
           <div className="d-flex">
             <div className="flex-1">
-              {result && (
-<p className={`${result.success ? 'success' : 'error'}`}>
-{result.message}
-</p>
-)}
+              { sending && 'sending...' }
             </div>
             <div className="flex-1 text-right">
-              <button type="submit" className="btn btn-info"><FontAwesomeIcon icon={faPaperPlane} /> SEND</button>
+              <button type="submit" disabled={sending} className="btn btn-info"><FontAwesomeIcon icon={faPaperPlane} /> SEND</button>
             </div>
 
           </div>
         </form>
-
+        <Alerter message="Thanks for contacting us. We will get back to you shortly" danger={false} show={success} />
+        <Alerter message="Please complete all fields" danger={true} show={errors} />
+        <Alerter message="Something went wrong. Please try again." danger={true} show={sendError} />
       </div>
 
       <div className="overlay"></div>
