@@ -8,11 +8,8 @@ const path = require('path');
 const app = express()
 const transporter = require('./config');
 
-const publicPath = path.join(__dirname, '.', 'client/build');
-
-app.get('*', (req, res) => {
-   res.sendFile(path.join(publicPath, 'index.html'));
-});
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.post('/send', (req, res) => {
   try {
@@ -44,6 +41,10 @@ app.post('/send', (req, res) => {
     message: 'Something went wrong. Try again later'
   });
 }
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
 });
 
 app.listen(PORT, () => {
