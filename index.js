@@ -8,7 +8,7 @@ const path = require('path');
 const app = express()
 const transporter = require('./config');
 
-const publicPath = path.join(__dirname, '.', 'client/public');
+const publicPath = path.join(__dirname, '.', 'client/build');
 
 app.get('*', (req, res) => {
    res.sendFile(path.join(publicPath, 'index.html'));
