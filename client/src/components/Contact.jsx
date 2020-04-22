@@ -81,9 +81,9 @@ function Contact() {
       <div className="contact-form">
         <h2><strong>OUR</strong> ADDRESS</h2>
 
-        <p><FontAwesomeIcon icon={ faMapMarker } /> <span className="ml-2">123 Butt St</span></p>
-        <p><FontAwesomeIcon icon={ faEnvelope } /> <span className="ml-2">butthead@gmail.com</span></p>
-        <p><FontAwesomeIcon icon={ faPhone } /> <span className="ml-2">(123)321-1234</span></p>
+        <a href="https://www.google.com/maps/place/Sacramento,+CA" target="_blank"><FontAwesomeIcon icon={ faMapMarker } /> <span className="ml-2">123 Butt St</span></a>
+        <a href="mailto:email@email.com"><FontAwesomeIcon icon={ faEnvelope } /> <span className="ml-2">butthead@gmail.com</span></a>
+        <a href="tel:1231231234"><FontAwesomeIcon icon={ faPhone } /> <span className="ml-2">(123)321-1234</span></a>
 
         <p className="mt-5">For any general inquiries, please fill in the following contact form:</p>
         <form onSubmit={ handleSendEmail }>

@@ -7,7 +7,7 @@ function ImageSlider() {
       <div className="banner"></div>
       <div className="callout">
         <h1>Selling Sacramento Businesses</h1>
-        <h3>Business Brokerage - Mergers and Acqusitions</h3>
+        <h3>Business Brokerage - Mergers and Acquisitions</h3>
       </div>
 
       <Link to='#about'>

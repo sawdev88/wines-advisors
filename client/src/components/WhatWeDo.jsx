@@ -25,7 +25,7 @@ function WhatWeDo() {
           </div>
 
           <p>
-            We assist qualified business purchasers seeking acqusitions.  Our typical buyer search clients consist of private equity firms, family offices, high net worth individuals and strategic acquirers (existing businesses looking to grow through acqusition).  We specialize in roll ups.  We have access to many off market opportunities.
+            We assist qualified business purchasers seeking acquisitions.  Our typical buyer search clients consist of private equity firms, family offices, high net worth individuals and strategic acquirers (existing businesses looking to grow through acqusition).  We specialize in roll ups.  We have access to many off market opportunities.
           </p>
         </div>
       </div>
