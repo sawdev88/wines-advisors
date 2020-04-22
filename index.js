@@ -20,24 +20,12 @@ app.post('/send', (req, res) => {
   try {
   const mailOptions = {
     from: req.body.emailAddress,
-    to: process.env.email,
+    to: 'justinwines@hotmail.com',
     subject: "⚠ New message from website form",
     html: `<h1>New Message from ${req.body.firstName} ${req.body.lastName}</h1>
            <h4>${req.body.message}</h4>
            <a href="mailto:${req.body.emailAddress}">reply to: ${req.body.emailAddress}</a>`
   };
-
-  transporter.verify(function(error, success) {
-  if (error) {
-    console.log('error');
-    console.log(error);
-    console.log('end');
-  } else {
-    console.log("Server is ready to take our messages");
-  }
-});
-
-console.log('host ' + transporter.options.host);
 
   transporter.sendMail(mailOptions, function(err, info) {
     if (err) {
