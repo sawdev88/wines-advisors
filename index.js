@@ -20,7 +20,7 @@ app.post('/send', (req, res) => {
   try {
   const mailOptions = {
     from: 'no-reply@winesadvisors.com',
-    to: 'winesadvisors@gmail.com',
+    to: 'justin@winesadvisors.com',
     subject: "⚠ New message from website form",
     html: `<h1>New Message from ${req.body.firstName} ${req.body.lastName}</h1>
            <h4>${req.body.message}</h4>

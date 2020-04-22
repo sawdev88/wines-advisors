@@ -74,16 +74,16 @@ function Contact() {
     <div id='contact'>
       <div className="side-callout">
         <h2 className="font-weight-bold">Contact</h2>
-        <h2>Justina</h2>
-        <h2>Wines</h2>
+        <h2>WINES</h2>
+        <h2>ADVISORS</h2>
       </div>
 
       <div className="contact-form">
         <h2><strong>OUR</strong> ADDRESS</h2>
 
-        <a href="https://www.google.com/maps/place/Sacramento,+CA" target="_blank"><FontAwesomeIcon icon={ faMapMarker } /> <span className="ml-2">123 Butt St</span></a>
-        <a href="mailto:email@email.com"><FontAwesomeIcon icon={ faEnvelope } /> <span className="ml-2">butthead@gmail.com</span></a>
-        <a href="tel:1231231234"><FontAwesomeIcon icon={ faPhone } /> <span className="ml-2">(123)321-1234</span></a>
+        <a href="https://www.google.com/maps/place/Sacramento,+CA" target="_blank"><FontAwesomeIcon icon={ faMapMarker } /> <span className="ml-2">Sacramento</span></a>
+        <a href="mailto:justin@winesadvisors.com"><FontAwesomeIcon icon={ faEnvelope } /> <span className="ml-2">justin@winesadvisors.com</span></a>
+        <a href="tel:5205956079"><FontAwesomeIcon icon={ faPhone } /> <span className="ml-2">(520)595-6079</span></a>
 
         <p className="mt-5">For any general inquiries, please fill in the following contact form:</p>
         <form onSubmit={ handleSendEmail }>
