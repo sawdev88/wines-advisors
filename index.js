@@ -9,12 +9,17 @@ const app = express()
 const transporter = require('./config');
 
 // Serve static files from the React app
+// app.use(express.static(path.join(__dirname, 'client/build')));
+
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(buildPath));
 
 app.post('/send', (req, res) => {
   try {
   const mailOptions = {
-    from: req.body.email,
+    from: req.body.emailAddress,
     to: process.env.email,
     subject: "⚠ New message from website form",
     html: `<h1>New Message from ${req.body.firstName} ${req.body.lastName}</h1>
@@ -24,6 +29,7 @@ app.post('/send', (req, res) => {
 
   transporter.sendMail(mailOptions, function(err, info) {
     if (err) {
+      console.log(err)
       res.status(500).send({
         success: false,
         message: 'Something went wrong. Try again later'
@@ -36,6 +42,7 @@ app.post('/send', (req, res) => {
     }
   });
 } catch (error) {
+  console.log(error)
   res.status(500).send({
     success: false,
     message: 'Something went wrong. Try again later'
