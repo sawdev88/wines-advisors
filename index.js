@@ -27,6 +27,18 @@ app.post('/send', (req, res) => {
            <a href="mailto:${req.body.emailAddress}">reply to: ${req.body.emailAddress}</a>`
   };
 
+  transporter.verify(function(error, success) {
+  if (error) {
+    console.log('error');
+    console.log(error);
+    console.log('end');
+  } else {
+    console.log("Server is ready to take our messages");
+  }
+});
+
+console.log('host ' + transporter.options.host);
+
   transporter.sendMail(mailOptions, function(err, info) {
     if (err) {
       console.log(err)
