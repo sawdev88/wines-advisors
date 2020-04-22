@@ -6,6 +6,10 @@ h1 {
   font-weight: 800;
 }
 
+a {
+  font-size: 1rem;
+}
+
 p {
   font-size: 1.1rem;
   line-height: 1.75rem;
@@ -154,7 +158,7 @@ p {
   background-size: cover;
   background-color: gray;
   background-blend-mode: luminosity;
-  height: 80vh;
+  height: 48rem;
   position: relative;
 
   h2 {
@@ -326,5 +330,120 @@ p {
 
   &.danger {
     background: #d9534f;
+  }
+}
+
+
+@media (max-width: 800px) {
+  html {
+    font-size: 1.3vw;
+  }
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 3vw;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+
+  .logo {
+    height: 3rem;
+    margin-left: 2.4rem;
+  }
+
+  .header-padding {
+    padding: .5rem 3rem;
+  }
+
+  .callout {
+    width: 90%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .d-flex {
+    flex-direction: column;
+  }
+
+  #about {
+    text-align: center;
+  }
+
+  .content {
+    margin: 0 0 4rem 0;
+    padding: 0 !important;
+  }
+
+  .about-img {
+    margin: 0;
+    height: auto;
+    width: 100%;
+  }
+
+  .img-border {
+    height: 18rem;
+    width: 100%;
+    right: -2rem;
+    top: -2rem;
+  }
+
+  .tile {
+    padding: 0;
+    margin:  2rem 0;
+  }
+
+  .side-callout {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+
+    h2 {
+      margin-left: 1rem;
+    }
+  }
+
+  #contact {
+    height: auto;
+
+    .btn-info {
+      padding: 1rem;
+    }
+
+    a {
+      font-size: 1.8rem;
+    }
+
+    input, textarea {
+      font-size: 1.4rem;
+      margin: .5rem 0;
+    }
+
+    textarea {margin-top: 0}
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .alert-container {
+    height: 6rem;
+    font-size: 1.8rem;
+    bottom: -6rem;
+    line-height: 6rem;
+  }
+
+  footer {
+    font-size: 1.2rem;
+
+    & .text-right {
+        text-align: left !important;
+    }
   }
 }
