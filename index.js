@@ -19,8 +19,8 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.post('/send', (req, res) => {
   try {
   const mailOptions = {
-    from: req.body.emailAddress,
-    to: 'justin@winesadvisors.com',
+    from: 'no-reply@winesadvisors.com',
+    to: 'winesadvisors@gmail.com',
     subject: "⚠ New message from website form",
     html: `<h1>New Message from ${req.body.firstName} ${req.body.lastName}</h1>
            <h4>${req.body.message}</h4>
