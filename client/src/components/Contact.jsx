@@ -81,7 +81,7 @@ function Contact() {
       <div className="contact-form">
         <h2><strong>OUR</strong> ADDRESS</h2>
 
-        <a href="https://www.google.com/maps/place/Sacramento,+CA" target="_blank"><FontAwesomeIcon icon={ faMapMarker } /> <span className="ml-2">Sacramento</span></a>
+        <a href="https://www.google.com/maps/place/Sacramento,+CA" target="_blank"><FontAwesomeIcon icon={ faMapMarker } /> <span className="ml-2">770 L Street Suite 950 Sacramento, CA 95814</span></a>
         <a href="mailto:justin@winesadvisors.com"><FontAwesomeIcon icon={ faEnvelope } /> <span className="ml-2">justin@winesadvisors.com</span></a>
         <a href="tel:5205956079"><FontAwesomeIcon icon={ faPhone } /> <span className="ml-2">(520)595-6079</span></a>
 
