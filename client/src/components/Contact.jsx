@@ -83,7 +83,7 @@ function Contact() {
 
         <a href="https://www.google.com/maps/place/770%20L%20Street%20Suite%20950%20Sacramento,%20CA%2095814" target="_blank"><FontAwesomeIcon icon={ faMapMarker } /> <span className="ml-2">770 L Street Suite 950 Sacramento, CA 95814</span></a>
         <a href="mailto:justin@winesadvisors.com"><FontAwesomeIcon icon={ faEnvelope } /> <span className="ml-2">justin@winesadvisors.com</span></a>
-        <a href="tel:5205956079"><FontAwesomeIcon icon={ faPhone } /> <span className="ml-2">(520)595-6079</span></a>
+        <a href="tel:9167010302"><FontAwesomeIcon icon={ faPhone } /> <span className="ml-2">(916)701-0302</span></a>
 
         <p className="mt-5">For any general inquiries, please fill in the following contact form:</p>
         <form onSubmit={ handleSendEmail }>
